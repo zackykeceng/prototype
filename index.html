@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT Multipack Kemas Global — Plastic &amp; Paper Packaging</title>
+
+<!-- Meta Tags & Favicon -->
 <meta name="description" content="PT Multipack Kemas Global — mitra pengadaan packaging kertas, karton, dan plastik, serta distributor vanilla extract PT Agatra untuk industri makanan &amp; minuman di Indonesia.">
+<meta name="keywords" content="packaging, kemasan kertas, karton, kemasan plastik, vanilla extract, PT Multipack Kemas Global, distributor packaging">
+<meta name="author" content="PT Multipack Kemas Global">
+<link rel="icon" type="image/png" href="favicon.png">
 
 <!-- Bootstrap 5 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
@@ -16,6 +21,87 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- GAYA TAMBAHAN UNTUK PENYEMPURNAAN UI -->
+<style>
+  /* Penyempurnaan Latar Belakang Hero */
+  .mp-hero-bg {
+    background: linear-gradient(160deg, rgba(22,50,79,0.92) 0%, rgba(14,34,56,0.96) 100%), 
+                url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  }
+
+  /* Penyempurnaan Gambar Samping (Profil, Portofolio, Industri) */
+  .mp-side-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .mp-side-img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  }
+
+  /* Penyempurnaan Kartu Misi */
+  .mp-mission-card {
+    background-color: #fff;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mp-mission-card:hover {
+    border-color: var(--red);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .mp-mission-number {
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--red);
+    opacity: 0.15;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+  }
+  .mp-mission-card:hover .mp-mission-number {
+    opacity: 0.3;
+  }
+  .mp-mission-text {
+    position: relative;
+    z-index: 2;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Ikon pada Nilai Perusahaan (Profil) */
+  .mp-value i {
+    font-size: 2.2rem;
+    color: var(--red);
+    margin-bottom: 0.8rem;
+    display: inline-block;
+  }
+
+  /* Penyempurnaan Maps */
+  .mp-maps-wrapper iframe {
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+  .mp-maps-wrapper iframe:hover {
+    filter: grayscale(0%);
+  }
+</style>
 </head>
 <body>
 
@@ -47,7 +133,7 @@
 </nav>
 
 <!-- ============ HERO ============ -->
-<header class="mp-hero" id="top">
+<header class="mp-hero mp-hero-bg" id="top">
   <div class="mp-hero-texture" aria-hidden="true"></div>
   <div class="container mp-hero-inner">
     <div class="row align-items-end">
@@ -74,7 +160,6 @@
     </div>
   </div>
 
-  <!-- material swatch strip: the "characteristic" hero device -->
   <div class="mp-swatch-strip" role="img" aria-label="Tujuh material packaging yang kami sediakan">
     <div class="mp-swatch mp-swatch--ivory"><span>Ivory Board</span></div>
     <div class="mp-swatch mp-swatch--duplex"><span>Duplex Board</span></div>
@@ -95,9 +180,13 @@
       <div class="col-lg-5">
         <p class="mp-kicker">Profil Perusahaan</p>
         <h2 class="mp-h2">Bukan sekadar<br>pemasok material.</h2>
+        <!-- Gambar Ilustrasi Perusahaan -->
+        <div class="mt-4 mb-4 mb-lg-0 pe-lg-4">
+          <img src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2a?q=80&w=800&auto=format&fit=crop" alt="Pabrik Multipack Kemas Global" class="mp-side-img">
+        </div>
       </div>
       <div class="col-lg-7">
-        <p class="mp-body-lg">
+        <p class="mp-body-lg mt-lg-5">
           PT Multipack Kemas Global bergerak di bidang packaging dengan fokus pada penyediaan
           berbagai kebutuhan kemasan berbasis kertas, karton, dan plastik. Kami melayani kebutuhan
           packaging secara fleksibel, baik untuk produksi rutin maupun pengadaan sesuai spesifikasi
@@ -130,20 +219,25 @@
       </div>
     </div>
 
+    <!-- Nilai Perusahaan dengan Ikon -->
     <div class="mp-values-row">
-      <div class="mp-value">
+      <div class="mp-value text-center">
+        <i class="bi bi-boxes"></i>
         <h3>One-stop sourcing</h3>
         <p>Berbagai material dalam satu mitra pengadaan.</p>
       </div>
-      <div class="mp-value">
+      <div class="mp-value text-center">
+        <i class="bi bi-sliders2"></i>
         <h3>Fleksibilitas</h3>
         <p>Material dan spesifikasi menyesuaikan kebutuhan aplikasi.</p>
       </div>
-      <div class="mp-value">
+      <div class="mp-value text-center">
+        <i class="bi bi-shield-check"></i>
         <h3>Konsistensi</h3>
         <p>Kualitas dan kontinuitas supply terjaga untuk kebutuhan rutin.</p>
       </div>
-      <div class="mp-value">
+      <div class="mp-value text-center">
+        <i class="bi bi-lightbulb"></i>
         <h3>Solusi industri</h3>
         <p>Membantu memilih material tepat untuk fungsi, tampilan, dan efisiensi.</p>
       </div>
@@ -163,6 +257,10 @@
           memposisikan diri sebagai partner sourcing yang membantu pelanggan mendapatkan
           material sesuai fungsi, bentuk, tampilan, dan kebutuhan supply.
         </p>
+        <!-- Gambar Ilustrasi Portofolio (Sudah Diperbarui) -->
+        <div class="mt-4 mb-4 mb-lg-0 pe-lg-4">
+          <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=800&auto=format&fit=crop" alt="Portofolio Material Kemasan" class="mp-side-img">
+        </div>
       </div>
       <div class="col-lg-7">
         <ul class="mp-material-list">
@@ -267,6 +365,10 @@
           Portofolio kami mendukung kebutuhan packaging dan bahan pendukung produksi
           pada berbagai segmen — mulai dari pemilihan material hingga pola supply berkala.
         </p>
+        <!-- Gambar Ilustrasi Segmen Industri (Sudah Diperbarui) -->
+        <div class="mt-4 mb-4 mb-lg-0 pe-lg-4">
+          <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop" alt="Segmen Industri" class="mp-side-img opacity-75">
+        </div>
       </div>
       <div class="col-lg-7">
         <div class="mp-industry-grid">
@@ -304,24 +406,16 @@
 <section class="mp-section" id="visi">
   <div class="container">
     <p class="mp-kicker">Visi, Misi &amp; Komitmen</p>
-    <div class="row">
-      <div class="col-lg-4 mp-vmk-col">
+    
+    <div class="row mb-5">
+      <div class="col-lg-6 mp-vmk-col">
         <h3 class="mp-vmk-title">Visi</h3>
         <p class="mp-body">
           Menjadi mitra terpercaya dalam penyediaan solusi packaging dan bahan pendukung
           industri makanan &amp; minuman di Indonesia.
         </p>
       </div>
-      <div class="col-lg-4 mp-vmk-col">
-        <h3 class="mp-vmk-title">Misi</h3>
-        <ol class="mp-mission-list">
-          <li>Menyediakan pilihan material packaging yang luas dan relevan.</li>
-          <li>Membangun hubungan jangka panjang dengan pelanggan dan pemasok.</li>
-          <li>Menjaga kualitas, kontinuitas, dan respons pelayanan.</li>
-          <li>Mengembangkan portofolio yang mendukung industri makanan &amp; minuman.</li>
-        </ol>
-      </div>
-      <div class="col-lg-4 mp-vmk-col">
+      <div class="col-lg-6 mp-vmk-col">
         <h3 class="mp-vmk-title">Komitmen</h3>
         <p class="mp-body">
           Menjadi partner yang responsif, fleksibel, dan berorientasi pada kebutuhan
@@ -329,7 +423,39 @@
         </p>
       </div>
     </div>
-    <p class="mp-motto">One partner. Multiple packaging solutions.</p>
+
+    <!-- Misi dalam 4 Kartu Elegan -->
+    <div class="row">
+      <div class="col-12">
+        <h3 class="mp-vmk-title border-0 mb-4">Misi</h3>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="mp-mission-card">
+          <span class="mp-mission-number">01</span>
+          <p class="mp-mission-text">Menyediakan pilihan material packaging yang luas dan relevan untuk berbagai skala bisnis.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="mp-mission-card">
+          <span class="mp-mission-number">02</span>
+          <p class="mp-mission-text">Membangun hubungan kolaboratif dan jangka panjang dengan pelanggan serta pemasok.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="mp-mission-card">
+          <span class="mp-mission-number">03</span>
+          <p class="mp-mission-text">Menjaga standar kualitas material, kontinuitas ketersediaan, dan kecepatan respons pelayanan.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="mp-mission-card">
+          <span class="mp-mission-number">04</span>
+          <p class="mp-mission-text">Terus mengembangkan inovasi portofolio yang relevan dengan tren industri makanan &amp; minuman.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mp-motto mt-4">One partner. Multiple packaging solutions.</p>
   </div>
 </section>
 
@@ -345,7 +471,7 @@
           Hubungi kami untuk konsultasi material dan spesifikasi.
         </p>
       </div>
-      <div class="col-lg-5 offset-lg-1">
+      <div class="col-lg-5 offset-lg-1 mt-4 mt-lg-0">
         <form class="mp-contact-form" id="contactForm" novalidate>
           <div class="mp-field">
             <label for="name">Nama</label>
@@ -365,7 +491,7 @@
       </div>
     </div>
 
-    <div class="mp-contact-details">
+    <div class="mp-contact-details mb-5">
       <div>
         <i class="bi bi-geo-alt"></i>
         <span>Jl. Raya Otonom Cikupa Asri Blok D4 No. 11, Kab. Tangerang, Provinsi Banten</span>
@@ -377,6 +503,13 @@
       <div>
         <i class="bi bi-envelope"></i>
         <a href="mailto:multipack@outlook.co.id">multipack@outlook.co.id</a>
+      </div>
+    </div>
+
+    <!-- Peta Integrasi Google Maps -->
+    <div class="row mt-5 pt-2 border-top">
+      <div class="col-12 mp-maps-wrapper mt-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.01423451556!2d106.45892543209592!3d-6.28475990264177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e42065842c26fbd%3A0x6b09ab43033e0708!2sCikupa%2C%20Tangerang%20Regency%2C%20Banten!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
